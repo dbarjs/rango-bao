@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="exo">
+<html lang="en" class="exo-italic">
 <head>
 	<meta charset="UTF-8">
-	<title>Opinião</title>
+	<title>Rango Bão</title>
 	<script src="dist/js/villa.min.js"></script>
 	<link rel="stylesheet" href="dist/css/villa.css"/>
+	<link rel="stylesheet" href="css/rango-bao.css"/>
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
 	<link rel="stylesheet" type="text/css" href="dist/css/cross.css"/>
@@ -13,7 +14,7 @@
 	<script src="dist/js/classList.min.js"></script>
 	<![endif]-->
 </head>
-<body class="font-blue-900">
+<body class="font-red-900">
 
 <style>
 
@@ -52,7 +53,7 @@
 		flex-wrap: wrap;
 		width: 100%;
 		height: 100%;
-		padding: 3mm 5mm 3mm 5mm;
+		padding: 3mm 3mm 3mm 5mm;
 	}
 
 	.item {
@@ -711,7 +712,7 @@
 
 		<section class="item sandwich first-of-type">
 			<div class="detail">
-				<span class="title">Toro Quente</span>
+				<span class="title">Touro Quente</span>
 				<span class="space"></span>
 				<div class="price"><span class="int">8</span><span class="decimal">50</span></div>
 			</div>
@@ -769,7 +770,6 @@
 					<li>maionese</li>
 					<li>milho</li>
 					<li>bacon</li>
-					<li>calabresa</li>
 				</ul>
 			</div>
 		</section>
@@ -791,6 +791,8 @@
 					<li>ovo</li>
 					<li>mostarda</li>
 					<li>batata Palha</li>
+					<li>bacon</li>
+					<li>calabresa</li>
 				</ul>
 			</div>
 		</section>
@@ -818,7 +820,7 @@
 
 </div>
 
-<div class="a4 font-blue-900">
+<div class="a4 font-blue-900 border-blue-900">
 
 	<style>
 
@@ -855,7 +857,7 @@
 
 	</style>
 
-	<article class="menu pizzas justify-start">
+	<article class="menu pizzas justify-start border-blue-900">
 
 		<header class="header">
 
@@ -940,9 +942,9 @@
 			</div>
 		</section>
 
-		<section class="item pizza first-of-type">
+		<section class="item pizza">
 			<div class="detail">
-				<span class="title">da Casa</span>
+				<span class="title">Frango com Bacon</span>
 				<span class="space"></span>
 				<div class="price"><span class="int">28</span><span class="decimal">00</span></div>
 				<div class="price"><span class="int">16</span><span class="decimal">00</span></div>
@@ -1077,6 +1079,27 @@
 			</div>
 		</section>
 
+		<section class="item pizza first-of-type">
+			<div class="detail">
+				<span class="title">Da Casa</span>
+				<span class="space"></span>
+				<div class="price"><span class="int">30</span><span class="decimal">00</span></div>
+				<div class="price"><span class="int">17</span><span class="decimal">00</span></div>
+			</div>
+			<div class="content">
+				<ul class="stuff">
+					<li>mussarela</li>
+					<li>presunto</li>
+					<li>calabresa</li>
+					<li>bacon</li>
+					<li>tomate</li>
+					<li>milho</li>
+					<li>batata palha</li>
+					<li>oregano</li>
+				</ul>
+			</div>
+		</section>
+
 		<style>
 
 			.soft-drinks {
@@ -1150,13 +1173,125 @@
 
 		<style>
 
+			.foods {
+				width: 33.333333333%;
+				margin-top: 14pt;
+			}
+
+			.foods p {
+				font-size: 2.25em;
+				padding: 0 .5em;
+				text-align: center;
+			}
+
+			.food.item {
+				width: 100%;
+			}
+
+			.border-none:after {
+				border: none;
+			}
+
+			.foods .food.item:after {
+				margin: 0 auto 6pt;
+				border: none;
+			}
+
+			.food.item .detail {
+				display: flex;
+				justify-content: space-between;
+			}
+
+		</style>
+
+		<section class="foods font-light-blue-900 flex flex-column">
+
+			<p>Servimos Marmitex no Almoço</p>
+
+			<section class="flex flex-wrap justify-start">
+
+				<section class="item food first-of-type">
+					<div class="detail">
+						<span class="title">Média</span>
+						<div class="price"><span class="int">10</span><span class="decimal">00</span></div>
+					</div>
+				</section>
+
+				<section class="item food first-of-type">
+					<div class="detail">
+						<span class="title">Grande</span>
+						<div class="price"><span class="int">12</span><span class="decimal">00</span></div>
+					</div>
+				</section>
+
+			</section>
+
+		</section>
+
+		<style>
+
+			.shipping,
+			.atendimento {
+				width: 33.333333333%;
+				margin-top: 18pt;
+				text-align: center;
+			}
+
+			.shipping h2,
+			.atendimento h2 {
+				font-size: 2.25em;
+				padding: 0 .5em;
+				font-weight: 400;
+			}
+
+			.atendimento h3 {
+				font-size: 1.5em;
+			}
+
+			.atendimento p {
+				margin-top: 12pt;
+			}
+
+		</style>
+
+		<section class="shipping font-red-900 flex flex-column">
+
+			<h2>Serviço de entrega:</h2>
+
+			<h3>R$1,00</h3>
+
+		</section>
+
+		<section class="atendimento font-red-900 flex flex-column">
+
+			<h2>Atendimento:</h2>
+
+			<h3>Segunda a Sábado</h3>
+
+			<p>"Domingo é dia do Senhor"</p>
+
+		</section>
+
+		<style>
+
 			.about {
-				height: 120pt;
+				height: 100%;
 				padding: 0 12pt 0 10pt;
 				width: 33.33333333%;
 			}
 
 			.about-inner {
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-align-items: center;
+				align-items: center;
+				-webkit-justify-content: space-between;
+				justify-content: space-between;
+				-webkit-flex-flow: column;
+				flex-flow: column;
 				height: 100%;
 				width: 100%;
 			}
@@ -1164,15 +1299,120 @@
 			.about-inner svg {
 				
 			}
+
+			.Logo {
+				padding: 16pt;
+			}
+
+			.Brand {
+				width: 100%;
+			}
+
+			.Contact {
+				width: 100%;
+				text-align: center;
+			}
+
+			.Contact span {
+				font-size: 3em;
+				font-weight: 400;
+			}
+
+			.Address {
+				width: 100%;
+				text-align: center;
+			}
+
+			.Atendimento {
+				text-align: center;
+			}
+
+			.Social {
+				-webkit-align-items: center;
+				align-items: center;
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-flow: column;
+				flex-flow: column;
+				width: 100%;
+			}
+
+			.SocialItem {
+				-webkit-align-items: center;
+				align-items: center;
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+			}
+
+			.SocialItem .icon {
+				font-size: 1.5em;
+			}
+
+			.FinalSlogan {
+				text-align: center;
+				padding: 16pt;
+			}
+
+			.FinalSlogan em {
+				font-size: 1.125em;
+			}
 			
 		</style>
 
-		<section class="about">
+		<section class="about red-900 font-white">
 
 			<div class="about-inner">
 
-				<img src="img/card-pure.svg" alt=""/>
-				
+				<div class="Brand">
+
+					<div class="Logo">
+
+						<img src="img/logo-white.png" alt=""/>
+
+					</div>
+
+					<div class="Contact">
+
+						<span>3543 2194</span>
+
+					</div>
+
+					<div class="Address">
+
+						<span>Rua Lazaro Gomes, 805, <br/> Itambaracá</span>
+
+					</div>
+
+				</div>
+
+				<div class="Social">
+
+					<div class="SocialItem">
+
+						<header class="">
+
+							<span class="icon icon-whatsapp"></span>
+
+						</header>
+
+						<div class="SocialItem-text">Whatsapp: <strong>43 9122 9247</strong></div>
+
+					</div>
+
+				</div>
+
+				<div class="FinalSlogan">
+
+					<p><em>Ebenézer</em></p>
+
+				</div>
+
 			</div>
 
 		</section>
